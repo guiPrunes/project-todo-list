@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto To-do List</title>
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="script/script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.26.25/dist/sweetalert2.all.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.26.25/dist/sweetalert2.min.css" rel="stylesheet">
+</head>
+    
+<body>
+    <main>
+        <div class="box-container">
+            <h1 class="lista-titulo">Minha To-do List</h1>
+            <form class="tarefa-form">
+                <input id="tarefa-descricao" class="tarefa-input-desc" type="text" placeholder="Digite uma nova tarefa...">
+                <button class="tarefa-button-add" type="button" onclick="adicionarTarefa()">Adicionar</button>
+            </form> 
+            <ul id="ul-tarefas" class="lista-tarefas"></ul>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #EAEFF4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Centraliza o conteúdo da página */
+    /* Troca a cor do fundo */
+}
+
+ul { list-style: none; } /* Retira a bolinha da lista */
+
+.box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* Centraliza o conteúdo da div */
+
+    margin-top: 3.1rem;
+    margin-bottom: 3.1rem;
+    padding: 2.5rem 2rem 3rem 2rem;
+    /* Configura as margens internas e externas da div */
+    
+    border-radius: 2.5rem;
+    box-shadow: 2px 4px 8px 6px rgb(0, 0, 0, 0.22);
+    /* Configura a borda da div */
+
+    background-color: #FFFFFF;
+    width: 28rem;
+    height: auto;
+    /* Configura tamanho e cor da div */
+}
+
+.lista-titulo { /* Estilo do título da lista */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2.3rem;
+    margin-bottom: 2.2rem;
+    color: #0b2847;
+}
+
+.tarefa-form{ /* Configuração da área do formulário */
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tarefa-input-desc { /* Estilo da barra de input text para descrição */
+    width: 21rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+    border: 1px solid #08529c;
+    padding: 2px 2px 2px 8px;
+}
+.tarefa-input-desc:focus { 
+    outline: 2px solid rgba(65, 159, 255, 0.55);
+    background-color: #319afd11;
+}
+.tarefa-input-desc::placeholder {
+    color: #011d3b;
+    opacity: 0.95;
+}
+
+.tarefa-button-add { /* Estilo do botão de adicionar */
+    font-size: 0.9rem;
+    font-weight: bolder;
+    color: #FFFFFF;
+    cursor: pointer;
+
+    background-color: #3B99FC;
+    border-radius: 0.3rem;
+    border-style: none; 
+
+    width: 5.6rem;
+    height: 2.3rem;
+    padding: 4px 4px 4px 4px;
+}
+.tarefa-button-add:focus,
+.tarefa-button-add:hover {
+    outline: 2px solid rgba(65, 159, 255, 0.55);    
+}
+
+.tarefa-container { /* Configuração da div para cada tarefa */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 0.1rem;
+    padding: 0.3rem 0.3rem 0.3rem 0.3rem; 
+
+    gap: 0.5rem;
+    width: 28rem;
+    min-height: 2.2rem;
+}
+
+/* Botão de checkbox do CSS Scan - adaptado */
+.tarefa-checkbox [type=checkbox].substituted {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.tarefa-checkbox [type=checkbox].substituted + label:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 1.15em;
+    width: 1.15em;
+    margin-right: 0.6em;
+    border: 1px solid;
+    border-radius: 0.2em;
+    background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 9 9"><rect x="0" y="4.3" transform="matrix(-0.707 -0.7072 0.7072 -0.707 0.5891 10.4702)" width="4.3" height="1.6" /><rect x="2.2" y="2.9" transform="matrix(-0.7071 0.7071 -0.7071 -0.7071 12.1877 2.9833)" width="6.1" height="1.7" /></svg>') no-repeat center, white;
+    background-size: 0;
+    transition: background-color 0.15s, background-size 0.1s, border-color 0.15s;
+    cursor: pointer;
+}
+.tarefa-checkbox [type=checkbox].substituted:checked + label:before {
+    background-color: #858484;
+    border-color: #858484;
+    background-size: 0.75em;
+}
+.tarefa-checkbox [type=checkbox].substituted:focus-visible + label:before {
+    outline: 2px solid rgba(65, 159, 255, 0.55);
+}
+
+.tarefa-checkbox:has(input:checked) + .tarefa-desc {
+    text-decoration: line-through;
+    color: #858484;
+    opacity: 0.8;
+}
+
+.tarefa-desc { /* Estilo da descrição da tarefa */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.3rem;
+    text-align: left;
+    overflow-wrap: break-word;
+    word-break: break-all
+}
+
+.tarefa-hr { /* Estilo da barra horizontal */
+    width: 28rem;
+    opacity: 0.4;
+    margin-top: 0.6rem;
+    margin-bottom: 0.4rem;
+}
+
+.tarefa-button-delete { /* Estilo do botão SVG do Lucide - adaptado */
+    margin-left: auto;
+    cursor: pointer;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: none;
+    border-radius: 1rem;
+    background-color: #FFFFFF;
+    color: rgb(209, 15, 15);
+}
+.tarefa-button-delete:hover {
+    background-color: #fdc6c6d7;
+}
+.tarefa-button-delete:focus-visible {
+    outline: 2px solid rgba(65, 159, 255, 0.55);
+}
